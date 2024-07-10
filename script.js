@@ -78,7 +78,6 @@ function initTop() {
     menuCover.addEventListener("click", function () { collapseMobileMenu(mobileMenu, menuCover) });
 
     // add a yellow indicator based on which page the user is visiting
-    const currentLocation = window.location.pathname;
     const yellow = "#fcc500";
     if (["/destinations.html", "/outdoors.html", "/attraction.html", "/culture.html", "/arts.html"].includes(currentLocation)) { 
         document.getElementById("destinations-desktop").style.borderColor = yellow;
