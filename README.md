@@ -1,7 +1,10 @@
 # HK Vacation - Hong Kong Tourism Website
 
 A comprehensive tourism website showcasing Hong Kong's attractions, dining, shopping, culture, arts, and travel information. Built as part of DECO7140 - Introduction to Web Design at the University of Queensland.
-Deployed via Github Pages: https://hiufungleung.github.io/deco7140-hk-vacation/
+## Info
+- **Deployed** via `Github Pages`: https://hiufungleung.github.io/deco7140-hk-vacation/
+### Design Process
+![Poster][./poster.png]
 ## 🌟 Features
 
 - **Responsive Design**: Fully optimized for desktop and mobile devices
