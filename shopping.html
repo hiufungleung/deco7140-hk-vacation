@@ -2,35 +2,34 @@
 <html lang='en'>
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping - HK Vacation</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!--Author: Freepik https://www.flaticon.com/free-icon/hong-kong_5038869-->
-    <link rel="icon" type="image/png" href="images/hk-flag-light.png" id="favicon">
+    <link rel="icon" type="image/png" href="assets/images/common/hk-flag-light.png" class="favicon">
     <!--Author: Freepik https://www.flaticon.com/free-icon/hong-kong_5038869-->
-    <link rel="icon" type="image/png" href="images/hk-flag.png" id="favicon-dark" media="(prefers-color-scheme: dark)"
-        disabled>
+    <link rel="icon" type="image/png" href="assets/images/common/hk-flag.png" class="favicon-dark" media="(prefers-color-scheme: dark)" disabled>
 
-<!--    <script src="loadHeaderFooter.js"></script>-->
 </head>
 
 <body>
-    <div id="headerpage"></div>
+    <div class="header-container"></div>
 
-    <header id="page-header">
+    <header class="hero-section">
         <!--https://au.hotels.com/go/hong-kong/best-hong-kong-shopping-malls-->
-        <img class="bg-image" src="images/shopping-pic1.png" alt="">
-        <div id="bg-image-title">
+        <img class="hero-bg-image" src="assets/images/shopping/shopping-pic1.png" alt="Shopping background">
+        <div class="hero-page-title">
             <h1>Shopping</h1>
             <p>Indulge in Retail Therapy</p>
         </div>
     </header>
 
-    <div class="content">
-        <div id="location" class="desktop-only">
+    <main class="main-content">
+        <nav class="breadcrumb desktop-only">
             <p>Current location: <a href="index.html">Home</a>
                 &nbsp>&nbsp&nbspShopping</p>
-        </div>
+        </nav>
 
         <!--All the passages and images in the rest of the div are referred from Hong Kong Tourism Board-->
         <!--Shopping your way through the MTR-->
@@ -42,7 +41,7 @@
                 offers mid-range and top-of-the-line fashion, skincare, jewellery and accessories.
                 </p>
             </div>
-            <img src="images/shopping-elements.jpeg" alt="">
+            <img src="assets/images/shopping/shopping-elements.jpeg" alt="">
         </article>
         <article class="passage  passage-with-title passage-inversed">
             <div>
@@ -52,7 +51,7 @@
                 jaw-dropping views of Victoria Harbour. For something even more special, head to the prestigious Four Seasons Hotel
                 directly atop the mall for Michelin-starred fare.</p>
             </div>
-            <img src="images/shopping-ifc-mall.jpeg" alt="">
+            <img src="assets/images/shopping/shopping-ifc-mall.jpeg" alt="">
         </article>
         <article class="passage passage-with-title">
             <div>
@@ -63,7 +62,7 @@
                 classic favourite.
                 </p>
             </div>
-            <img src="images/shopping-landmark.jpeg" alt="">
+            <img src="assets/images/shopping/shopping-landmark.jpeg" alt="">
         </article>
         <article class="passage  passage-with-title passage-inversed">
             <div>
@@ -73,21 +72,21 @@
                 of am and pm). This after-dark shopping hub houses over 170 retail outlets which close at midnight, while restaurants
                 stay open until 2am and entertainment spots carry on until dawn.</p>
             </div>
-            <img src="images/shopping-apm.jpeg" alt="">
+            <img src="assets/images/shopping/shopping-apm.jpeg" alt="">
         </article>
         
-    </div>
+    </main>
 
 
 
 
-    <div id="footerpage"></div>
+    <div class="footer-container"></div>
 
 
     <script>
         const currentLocation = '/shopping.html';
     </script>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

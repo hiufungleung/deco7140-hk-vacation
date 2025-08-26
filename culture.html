@@ -2,39 +2,38 @@
 <html lang='en'>
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Culture - HK Vacation</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!--Author: Freepik https://www.flaticon.com/free-icon/hong-kong_5038869-->
-    <link rel="icon" type="image/png" href="images/hk-flag-light.png" id="favicon">
+    <link rel="icon" type="image/png" href="assets/images/common/hk-flag-light.png" class="favicon">
     <!--Author: Freepik https://www.flaticon.com/free-icon/hong-kong_5038869-->
-    <link rel="icon" type="image/png" href="images/hk-flag.png" id="favicon-dark" media="(prefers-color-scheme: dark)"
-        disabled>
+    <link rel="icon" type="image/png" href="assets/images/common/hk-flag.png" class="favicon-dark" media="(prefers-color-scheme: dark)" disabled>
 
-<!--    <script src="loadHeaderFooter.js"></script>-->
 </head>
 
 <body>
-    <div id="headerpage"></div>
+    <div class="header-container"></div>
 
-    <header id="page-header">
+    <header class="hero-section">
         <!--Photographer：Tiff Ng: https://www.pexels.com/zh-tw/photo/2121453/-->
-        <img class="bg-image" src="images/Culture-pic1.png" alt="">
-        <div id="bg-image-title">
+        <img class="hero-bg-image" src="assets/images/culture/Culture-pic1.png" alt="Culture background">
+        <div class="hero-page-title">
             <h1>Culture</h1>
             <p>Immerse in Rich Traditions</p>
         </div>
     </header>
 
-    <div class="content">
-        <div id="location" class="desktop-only">
+    <main class="main-content">
+        <nav class="breadcrumb desktop-only">
             <p>Current location: <a href="index.html">Home</a>
                 &nbsp>&nbsp&nbspDestinations&nbsp>&nbsp&nbspCulture</p>
-        </div>
+        </nav>
 
 
 
-        <div>
+        <section>
             <!--All the contents in this div are referred from-->
             <!--https://www.discoverhongkong.com/eng/explore/arts/dont-miss-these-hong-kong-arts-and-culture-activities.html-->
             <h1>10 Hong Kong arts and cultural activities you don’t want to miss</h1>
@@ -52,7 +51,7 @@
                     Chinese painting and calligraphy, and China trade art, with a collection of over 17,000 items.
                     </p>
                 </div>
-                <img src="images/Culture-pic2.jpeg" alt="">
+                <img src="assets/images/culture/Culture-pic2.jpeg" alt="">
             </article>
             <article class="passage  passage-with-title passage-smaller-text passage-inversed">
                 <div>
@@ -62,7 +61,7 @@
                     civilisations through international partnerships. The museum will present the finest objects from the Palace Museum and
                     other important cultural institutions around the world.</p>
                 </div>
-                <img src="images/Culture-pic3.jpeg" alt="">
+                <img src="assets/images/culture/Culture-pic3.jpeg" alt="">
             </article>
             <article class="passage passage-with-title passage-smaller-text">
                 <div>
@@ -73,7 +72,7 @@
                     large-scale installations in the middle of a walkway or mounted on a side wall.
                     </p>
                 </div>
-                <img src="images/Culture-pic4.jpeg" alt="">
+                <img src="assets/images/culture/Culture-pic4.jpeg" alt="">
             </article>
             <article class="passage  passage-with-title passage-smaller-text passage-inversed">
                 <div>
@@ -83,23 +82,23 @@
                     exciting hybrid concepts and artist-led initiatives. Head to Mudheytong Gallery for an immersion into the craftsmanship
                     of ceramic arts, and sign up for a pottery class to learn new artistic skills..</p>
                 </div>
-                <img src="images/Culture-pic5.jpeg" alt="">
+                <img src="assets/images/culture/Culture-pic5.jpeg" alt="">
             </article>
-        </div>
+        </section>
 
         
-    </div>
+    </main>
 
 
 
 
-    <div id="footerpage"></div>
+    <div class="footer-container"></div>
 
 
     <script>
         const currentLocation = '/culture.html';
     </script>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

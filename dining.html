@@ -2,37 +2,36 @@
 <html lang='en'>
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dining - HK Vacation</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!--Author: Freepik https://www.flaticon.com/free-icon/hong-kong_5038869-->
-    <link rel="icon" type="image/png" href="images/hk-flag-light.png" id="favicon">
+    <link rel="icon" type="image/png" href="assets/images/common/hk-flag-light.png" class="favicon">
     <!--Author: Freepik https://www.flaticon.com/free-icon/hong-kong_5038869-->
-    <link rel="icon" type="image/png" href="images/hk-flag.png" id="favicon-dark" media="(prefers-color-scheme: dark)"
-        disabled>
+    <link rel="icon" type="image/png" href="assets/images/common/hk-flag.png" class="favicon-dark" media="(prefers-color-scheme: dark)" disabled>
 
-<!--    <script src="loadHeaderFooter.js"></script>-->
 </head>
 
 <body>
-    <div id="headerpage"></div>
+    <div class="header-container"></div>
 
-    <header id="page-header">
+    <header class="hero-section">
         <!--image source: Foodpanda-米米港式小吃-->
         <!--https://www.foodpanda.com.tw/restaurant/d6dw/mi-mi-gang-shi-xiao-chi-->
-        <img class="bg-image" src="images/dining-pic1.png" alt="">
-        <div id="bg-image-title">
+        <img class="hero-bg-image" src="assets/images/dining/dining-pic1.png" alt="Dining background">
+        <div class="hero-page-title">
             <h1>Dining</h1>
             <p>Indulge in HK Culinary Delights</p>
         </div>
     </header>
 
-    <div class="content">
-        <div id="location" class="desktop-only">
+    <main class="main-content">
+        <nav class="breadcrumb desktop-only">
             <p>Current location: <a href="index.html">Home</a>
                 &nbsp>&nbsp&nbspDining</p>
-        </div>
-        <div>
+        </nav>
+        <section>
              <!---This content is referred from Hong Kong Tourism: The four heavenly kings of dim sum-->
             <!--https://www.discoverhongkong.com/seasia/explore/dining/heavenly-kings-of-dim-sum.html-->
             <div>
@@ -46,37 +45,37 @@
                <p>Siu Mai - The most famous of all dim sum, this pork, shrimp and mushroom dumpling also comes in a fish variety that is
                     commonly sold as street food. In Hong Kong, we recognise siu mai by its yellow skin and orange adornments of either fish
                     eggs or diced carrot, but this dumpling has many incarnations.</p>
-                <img src="images/dining-pic2.jpeg" alt="food">
+                <img src="assets/images/dining/dining-pic2.jpeg" alt="food">
             </article>
             <article class="passage passage-inversed">
                 <p>Barbecued pork buns (Char siu bao) - Char siu bao can be steamed or baked, but this bun always contains pork in a dark, sweet barbecue sauce. The dough in
                 the more famous steamed version uses both yeast and baking powder as the leavening agents, giving it the texture of
                 fine, soft bread, whilst the baked version is usually darker and glazed.</p>
-                <img src="images/dining-pic3.jpeg" alt="food">
+                <img src="assets/images/dining/dining-pic3.jpeg" alt="food">
             </article><article class="passage">
                 <p>Shrimp dumplings (Har gow) - Har gow is the crown jewel of dim sum, and many restaurants choose to perfect this as their signature offering. The
                 delicate, translucent pastry of har gow hides a generous filling of prawn, but the dumpling must always be small enough
                 to be eaten in a single bite.</p>
-                <img src="images/dining-pic4.jpeg" alt="food">
+                <img src="assets/images/dining/dining-pic4.jpeg" alt="food">
             </article><article class="passage passage-inversed">
                 <p>Egg tarts (Dan taat) - The Cantonese cousin of the English custard tart, dan taat comes in a few variations. The tart base is made either with
                 shortcrust pastry (more commonly found at bakeries) or puff pastry (often seen at dim sum restaurants), and the
                 long-standing debate on which tart base is superior remains unresolved.</p>
-                <img src="images/dining-pic5.jpeg" alt="food">
+                <img src="assets/images/dining/dining-pic5.jpeg" alt="food">
             </article>
-        </div>
-    </div>
+        </section>
+    </main>
 
 
 
 
-    <div id="footerpage"></div>
+    <div class="footer-container"></div>
 
 
     <script>
         const currentLocation = '/dining.html';
     </script>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

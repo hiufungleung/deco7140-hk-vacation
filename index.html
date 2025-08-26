@@ -1,81 +1,93 @@
 <!doctype html>
 <html lang='en'>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HK Vacation</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!--Author: Freepik https://www.flaticon.com/free-icon/hong-kong_5038869-->
-    <link rel="icon" type="image/png" href="images/hk-flag-light.png" id="favicon">
+    <link rel="icon" type="image/png" href="assets/images/common/hk-flag-light.png" class="favicon">
     <!--Author: Freepik https://www.flaticon.com/free-icon/hong-kong_5038869-->
-    <link rel="icon" type="image/png" href="images/hk-flag.png" id="favicon-dark" media="(prefers-color-scheme: dark)" disabled>
-
+    <link rel="icon" type="image/png" href="assets/images/common/hk-flag.png" class="favicon-dark" media="(prefers-color-scheme: dark)" disabled>
 </head>
 <body>
-    <div id="headerpage"></div>
+    <div class="header-container"></div>
 
-    <header id="page-header">
+    <header class="hero-section">
         <!--https://wallpaper.dog/large/20459701.jpg-->
-        <img class="bg-image" src="images/index-pic1.png" alt="">
-        <!--element cropped from Honh Kong Tourism Board, remove the background and change colour-->
+        <img class="hero-bg-image" src="assets/images/index/index-pic1.png" alt="Hong Kong skyline background">
+        <!--element cropped from Hong Kong Tourism Board, remove the background and change colour-->
         <!---https://www.discoverhongkong.com/seasia/explore.html-->
-        <img id="hello-hk" src="images/hello-hk.png" alt="Hello Hong Kong!">
-
+        <img class="hero-title" src="assets/images/index/hello-hk.png" alt="Hello Hong Kong!">
     </header>
     
 
-    <div class="content">
-        <article class="passage passage-index">
-            <!---Passage is referred from https://www.discoverhongkong.com/seasia/explore.html-->
-            <p>Hong Kong is always full of surprises: world-class theme parks, mouthwatering street food, unique experiences of
-            intangible cultural heritage…and don’t forget to marvel at the stunning skyline from angles you’ve never seen!</p>
-            <!--Photographer: Nerfee Mirandilla https://www.pexels.com/zh-tw/photo/3186654/-->
-            <img src="images/index-pic2.png" alt="food">
-        </article>
-    </div>
+    <main class="main-content">
+        <section class="intro-section">
+            <article class="intro-text">
+                <!---Passage is referred from https://www.discoverhongkong.com/seasia/explore.html-->
+                <p>Hong Kong is always full of surprises: world-class theme parks, mouthwatering street food, unique experiences of
+                intangible cultural heritage…and don't forget to marvel at the stunning skyline from angles you've never seen!</p>
+                <!--Photographer: Nerfee Mirandilla https://www.pexels.com/zh-tw/photo/3186654/-->
+                <img src="assets/images/index/index-pic2.png" alt="Delicious Hong Kong street food">
+            </article>
+        </section>
 
 
-    <div id="explore-hk">
-        <!--Author: aquir https://www.123rf.com/photo_81222997_welcome-to-hong-kong-red-stamp.html-->
-        <!--colour is changed to fit the website style-->
-        <img src="images/welcome-to-hong-kong.png" alt="welcome to hk" width=100px>
-        <h1>Explore Hong Kong</h1>
-    </div>
+        <section class="explore-section">
+            <div class="explore-header">
+                <!--Author: aquir https://www.123rf.com/photo_81222997_welcome-to-hong-kong-red-stamp.html-->
+                <!--colour is changed to fit the website style-->
+                <img src="assets/images/index/welcome-to-hong-kong.png" alt="Welcome to Hong Kong stamp" width="100">
+                <h1>Explore HK</h1>
+            </div>
 
-    <div id="explore-button">
-        <!--All the img in this div #explore-button are referred from Hong Kong Tourism Board-->
-        <!--colour is changed to fit the website style-->
-        <!--https://www.discoverhongkong.com/seasia/explore.html-->
-        <div>
-            <a href="destination.html"><img src="images/index-explore-1.png" alt="" class="icon" data-hover-src="images/index-explore-1-hover.png"></a>
-            <p>Attraction</p>
-        </div>
-        <div>
-            <a href="dining.html"><img src="images/index-explore-2.png" alt="" class="icon" data-hover-src="images/index-explore-2-hover.png"></a>
-            <p>Dining</p>
-        </div>
-        <div>
-            <a href="shopping.html"><img src="images/index-explore-3.png" alt="" class="icon" data-hover-src="images/index-explore-3-hover.png"></a>
-            <p>Shopping</p>
-        </div>
-        <div>
-            <a href="destination.html"><img src="images/index-explore-4.png" alt="" class="icon" data-hover-src="images/index-explore-4-hover.png"></a>
-            <p>Outdoors</p>
-        </div>
-        <div>
-            <a href="#"><img src="images/index-explore-5.png" alt="" class="icon" data-hover-src="images/index-explore-5-hover.png"></a>
-            <p>Culture</p>
-        </div>
-        <div>
-            <a href="#"><img src="images/index-explore-6.png" alt="" class="icon" data-hover-src="images/index-explore-6-hover.png"></a>
-            <p>Arts</p>
-        </div>
-    </div>
+            <div class="explore-grid">
+                <!--All icons are referred from Hong Kong Tourism Board-->
+                <!--colour is changed to fit the website style-->
+                <!--https://www.discoverhongkong.com/seasia/explore.html-->
+                <div class="explore-item">
+                    <a href="attraction.html">
+                        <img src="assets/images/index/index-explore-1.png" alt="Attraction icon" class="explore-icon" data-hover-src="assets/images/index/index-explore-1-hover.png">
+                        <p>Attraction</p>
+                    </a>
+                </div>
+                <div class="explore-item">
+                    <a href="dining.html">
+                        <img src="assets/images/index/index-explore-2.png" alt="Dining icon" class="explore-icon" data-hover-src="assets/images/index/index-explore-2-hover.png">
+                        <p>Dining</p>
+                    </a>
+                </div>
+                <div class="explore-item">
+                    <a href="shopping.html">
+                        <img src="assets/images/index/index-explore-3.png" alt="Shopping icon" class="explore-icon" data-hover-src="assets/images/index/index-explore-3-hover.png">
+                        <p>Shopping</p>
+                    </a>
+                </div>
+                <div class="explore-item">
+                    <a href="outdoors.html">
+                        <img src="assets/images/index/index-explore-4.png" alt="Outdoors icon" class="explore-icon" data-hover-src="assets/images/index/index-explore-4-hover.png">
+                        <p>Outdoors</p>
+                    </a>
+                </div>
+                <div class="explore-item">
+                    <a href="culture.html">
+                        <img src="assets/images/index/index-explore-5.png" alt="Culture icon" class="explore-icon" data-hover-src="assets/images/index/index-explore-5-hover.png">
+                        <p>Culture</p>
+                    </a>
+                </div>
+                <div class="explore-item">
+                    <a href="arts.html">
+                        <img src="assets/images/index/index-explore-6.png" alt="Arts icon" class="explore-icon" data-hover-src="assets/images/index/index-explore-6-hover.png">
+                        <p>Arts</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <div id="footerpage"></div>
+    <div class="footer-container"></div>
     
-    
-    <script src="script.js"></script>
-    
-    </script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html> 

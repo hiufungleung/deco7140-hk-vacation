@@ -1,55 +1,59 @@
 <!doctype html>
 <html lang='en'>
-
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us - HK Vacation</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!--Author: Freepik https://www.flaticon.com/free-icon/hong-kong_5038869-->
-    <link rel="icon" type="image/png" href="images/hk-flag-light.png" id="favicon">
+    <link rel="icon" type="image/png" href="assets/images/common/hk-flag-light.png" class="favicon">
     <!--Author: Freepik https://www.flaticon.com/free-icon/hong-kong_5038869-->
-    <link rel="icon" type="image/png" href="images/hk-flag.png" id="favicon-dark" media="(prefers-color-scheme: dark)"
-        disabled>
-
-    <script src="loadHeaderFooter.js"></script>
+    <link rel="icon" type="image/png" href="assets/images/common/hk-flag.png" class="favicon-dark" media="(prefers-color-scheme: dark)" disabled>
 </head>
 
 <body>
-    <div id="headerpage"></div>
+    <div class="header-container"></div>
 
-    <header id="page-header">
+    <header class="hero-section">
         <!--https://wallpaper.dog/large/20459701.jpg-->
-        <img class="bg-image" src="images/about-us-pic1.png" alt="">
-        <div id="about-bg-image-title"><h1>About us</h1></div>
+        <img class="hero-bg-image" src="assets/images/about-us/about-us-pic1.png" alt="About us background">
+        <div class="hero-page-title"><h1>About us</h1></div>
     </header>
 
-    <div class="content">
-        <div id="location" class="desktop-only">
+    <main class="main-content">
+        <nav class="breadcrumb desktop-only">
             <p>Current location: <a href="index.html">Home</a>
-                &nbsp>&nbsp&nbspAbout us</p>
-        </div> 
+                &nbsp;&gt;&nbsp;&gt;&nbsp;About us</p>
+        </nav>
 
-        <p>This website is a project for DECO-7140. HK Vacation intends to echance visitor's experience once they arrive this country.</p>
+        <section class="about-intro">
+            <p>This website is a project for DECO-7140. HK Vacation intends to enhance visitor's experience once they arrive this country.</p>
+        </section>
 
-        <div id="contact-us">
+        <section class="contact-section">
             <h1>Contact us</h1>
-            <!--Author: IconBaandar https://www.flaticon.com/free-icon/programmer_3891130-->
-            <div><img src="images/designer-icon.png" alt=""><p>Hugh Leung</p></div>
-            <!--Author: Freepik https://www.flaticon.com/free-icon/license_1649394-->
-            <div><img src="images/student-id-icon.png" alt=""><p>47675458</p></div>
-            <!--Author: Freepik https://www.flaticon.com/free-icon/email_738799-->
-            <div><img src="images/email-icon.png" alt=""><p>s4767545@student.uq.edu.au</p></div>
-        </div>
-    </div>
-    
+            <div class="contact-info">
+                <!--Author: IconBaandar https://www.flaticon.com/free-icon/programmer_3891130-->
+                <div class="contact-item">
+                    <img src="assets/images/about-us/designer-icon.png" alt="Designer icon">
+                    <p>Hugh Leung</p>
+                </div>
+                <!--Author: Freepik https://www.flaticon.com/free-icon/license_1649394-->
+                <div class="contact-item">
+                    <img src="assets/images/about-us/student-id-icon.png" alt="Student ID icon">
+                    <p>19890604</p>
+                </div>
+                <!--Author: Freepik https://www.flaticon.com/free-icon/email_738799-->
+                <div class="contact-item">
+                    <img src="assets/images/about-us/email-icon.png" alt="Email icon">
+                    <p>leunghiufung@outlook.com</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <div id="footerpage"></div>
+    <div class="footer-container"></div>
 
-
-    <script>
-        const currentLocation = '/about-us.html';
-    </script>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
-
 </html>

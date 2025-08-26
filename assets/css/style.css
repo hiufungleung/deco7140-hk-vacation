@@ -1,0 +1,1203 @@
+/* ==========================================================================
+   HK Vacation - Modernized CSS
+   ========================================================================== */
+
+/* ==========================================================================
+   CSS Reset & Base Styles
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #fcc500;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input, button {
+    font-family: inherit;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+h1 {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+h2 {
+    color: white;
+    font-size: 28px;
+}
+
+p {
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   Layout Utilities
+   ========================================================================== */
+
+.mobile-only {
+    display: none;
+}
+
+.desktop-only {
+    display: block;
+}
+
+.main-content {
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 0 80px;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+
+.header-container {
+    position: sticky;
+    top: -60px;
+    z-index: 96;
+    opacity: 0.97;
+}
+
+.site-header {
+    position: relative;
+    background-color: #111111;
+    z-index: 105;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 80px;
+}
+
+/* Desktop: center the logo */
+@media (min-width: 769px) {
+    .site-header {
+        justify-content: center;
+    }
+    
+    .mobile-nav__toggle {
+        display: none !important;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.logo h1 {
+    font-size: 30px;
+    white-space: nowrap;
+}
+
+/* Desktop Navigation */
+.main-navigation {
+    background-color: #111111;
+    padding: 5px 0;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-item {
+    position: relative;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.nav-item.active {
+    border-color: #fcc500;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #222222;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 170px;
+    background-color: rgba(17, 17, 17, 0.9);
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 200;
+}
+
+.nav-destinations:hover .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown-menu li {
+    padding: 0.5em 0 0.5em 1em;
+}
+
+.dropdown-menu a {
+    font-size: 16px;
+    display: block;
+    width: 100%;
+}
+
+/* Mobile Menu */
+.mobile-nav__toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    position: relative;
+    z-index: 101;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-nav__icon {
+    width: 24px;
+    height: 18px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mobile-nav__line {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transform-origin: center;
+}
+
+/* Hamburger to X animation */
+.mobile-nav__toggle[data-toggle="open"] .mobile-nav__line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-nav__toggle[data-toggle="open"] .mobile-nav__line:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.mobile-nav__toggle[data-toggle="open"] .mobile-nav__line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Screen reader only text */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.menu-cover {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(17, 17, 17, 0.8);
+    z-index: 98;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.menu-cover.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -75%;
+    width: 75%;
+    height: 100vh;
+    background-color: rgba(17, 17, 17, 0.95);
+    transition: left 0.3s ease;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu.active {
+    left: 0;
+}
+
+.mobile-nav-list {
+    flex: 1;
+    margin-top: 80px;
+    padding-top: 20px;
+}
+
+.mobile-nav-item {
+    margin: 15px 0;
+    padding: 0 30px;
+}
+
+.mobile-nav-link {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.mobile-nav-link.active {
+    border-color: #fcc500;
+}
+
+.mobile-nav-link img {
+    width: 25px;
+    margin-right: 1em;
+}
+
+.mobile-nav-link p {
+    font-size: inherit;
+    margin: 0;
+}
+
+.mobile-dropdown {
+    display: none;
+    flex-direction: column;
+    margin: 8px 0 0 40px;
+    gap: 0.5rem;
+}
+
+.mobile-dropdown.active {
+    display: flex;
+}
+
+.mobile-dropdown a {
+    font-size: 18px;
+    padding: 0.5em 0;
+}
+
+.mobile-social-icons {
+    padding: 20px 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.mobile-social-icons .social-icon {
+    width: 45px;
+    height: auto;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    padding-top: min(42.86%, 400px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-title {
+    position: absolute;
+    top: 10%;
+    width: 70%;
+    max-width: 800px;
+    opacity: 0.6;
+    z-index: 2;
+}
+
+/* ==========================================================================
+   Content Sections
+   ========================================================================== */
+
+/* Center all images in content sections */
+.main-content img,
+article img,
+.passage img,
+.article-no-flex img,
+.intro-text img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Exception for icons and special images */
+.explore-icon,
+.social-icon,
+.go-button,
+.app-icon,
+.download-icon,
+.hero-bg-image,
+.hero-title {
+    margin: initial;
+}
+
+.intro-section {
+    margin: 30px 0;
+}
+
+.intro-text {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.intro-text p {
+    flex: 1;
+    min-width: 300px;
+    font-size: 24px;
+    line-height: 1.75;
+}
+
+.intro-text img {
+    flex: 1;
+    min-width: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Article and passage styles */
+.passage {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.passage img {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.passage div,
+.passage > div {
+    flex: 1;
+    min-width: 300px;
+}
+
+.article-no-flex {
+    margin: 30px 0;
+}
+
+.article-no-flex img {
+    max-width: 800px;
+    width: 100%;
+}
+
+.article-no-flex li {
+    list-style-type: disc;
+    color: white;
+    font-size: 17px;
+    line-height: 1.75;
+    margin-left: 20px;
+}
+
+.article-no-flex li a {
+    font-size: 17px;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Explore Section
+   ========================================================================== */
+
+.explore-section {
+    margin: 50px 0;
+}
+
+.explore-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px;
+    gap: 10px;
+}
+
+.explore-header img {
+    height: auto;
+    margin: 0;
+}
+
+.explore-header h1 {
+    font-size: 35px;
+    white-space: nowrap;
+}
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 0 5%;
+    text-align: center;
+}
+
+.explore-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.explore-item a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.explore-item:hover {
+    transform: translateY(-5px);
+}
+
+.explore-icon {
+    width: 70%;
+    max-width: 120px;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.explore-item p {
+    font-size: 18px;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+}
+
+.explore-item:hover p {
+    color: #fcc500;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+input[type="text"] {
+    background-color: #808080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.75rem 1rem;
+    font-size: 17px;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    background-color: #909090;
+}
+
+input[type="text"]::placeholder {
+    color: #c0c0c0;
+}
+
+.go-button {
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    object-fit: contain;
+    order: 3;
+}
+
+.go-button:hover {
+    transform: scale(1.1);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer {
+    margin: 50px auto 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1200px;
+    padding: 0 5%;
+}
+
+.footer-newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.newsletter-content {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.newsletter-content h1 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.newsletter-content p {
+    font-size: 15px;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    max-width: 450px;
+    justify-content: center;
+}
+
+.newsletter-form input {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Icon Container with Hover Effects */
+.icon-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.icon-container:hover {
+    transform: scale(1.1);
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.icon-container:hover .social-icon {
+    opacity: 0;
+}
+
+.icon-container:hover .social-icon-hover {
+    opacity: 1;
+}
+
+/* Subscribe Info Modals */
+.subscribe-info {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(50, 50, 50, 0.95);
+    border-radius: 10px;
+    z-index: 105;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.subscribe-info.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.subscribe-info img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.subscribe-info p {
+    font-size: 24px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   Responsive Design - Mobile First Approach
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .header-container {
+        top: 0;
+    }
+
+    .site-header {
+        padding: 1rem 20px;
+        justify-content: center;
+        position: relative;
+    }
+
+    .mobile-nav__toggle {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    .logo img {
+        width: 40px;
+    }
+
+    .logo h1 {
+        font-size: 25px;
+    }
+
+    .hero-title {
+        top: 0;
+        width: 80%;
+        opacity: 0.7;
+    }
+
+    .intro-text {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .intro-text p {
+        font-size: 18px;
+        padding-top: 20px;
+    }
+    
+    /* Mobile article styles */
+    .passage {
+        flex-direction: column;
+    }
+    
+    .passage img {
+        width: 100%;
+        min-width: unset;
+    }
+    
+    .article-no-flex li {
+        font-size: 16px;
+    }
+
+    .explore-header {
+        margin: 30px auto;
+    }
+
+    .explore-header h1 {
+        font-size: 28px;
+        white-space: pre-wrap;
+    }
+
+    .explore-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .explore-item p {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .main-content {
+        margin: 0 auto;
+        padding: 30px 25px 0;
+    }
+
+    /* Footer Mobile */
+    .footer-newsletter {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .newsletter-content h1 {
+        font-size: 28px;
+    }
+
+    .newsletter-content p {
+        font-size: 16px;
+        white-space: normal;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 100%;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+        min-width: 80vw;
+        padding: 12px 5%;
+        font-size: 16px;
+    }
+
+    .go-button {
+        width: 60px;
+        height: auto;
+    }
+
+    .footer-social {
+        margin: 0 15%;
+        gap: 1rem;
+    }
+
+    .social-icon {
+        width: 45px;
+        height: auto;
+    }
+
+    .social-icon-hover {
+        display: none;
+    }
+    
+    /* Re-enable hover effects for mobile social icons on touch */
+    .mobile-social-icons .icon-container {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+    }
+    
+    .mobile-social-icons .social-icon-hover {
+        display: block;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .mobile-social-icons .icon-container:active .social-icon {
+        opacity: 0;
+    }
+    
+    .mobile-social-icons .icon-container:active .social-icon-hover {
+        opacity: 1;
+    }
+
+    .subscribe-info {
+        top: 55%;
+        padding: 15px;
+    }
+
+    .subscribe-info img {
+        width: 60px;
+        margin: 0 15px;
+    }
+
+    .subscribe-info p {
+        font-size: 18px;
+        margin: 0 15px;
+    }
+}
+
+/* ==========================================================================
+   Transport Page Styles
+   ========================================================================== */
+
+.app-details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px 30px 0 30px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    margin: 30px auto 0;
+    max-width: 600px;
+}
+
+.hkemobility-section .app-more-info {
+    padding: 0px 30px 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 0 0 10px 10px;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 600px;
+}
+
+.app-details .app-icon {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    margin: 0 !important;
+}
+
+.app-info {
+    flex: 0 0 auto;
+}
+
+.app-info h3 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.download-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: nowrap;
+}
+
+.download-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.download-link:hover {
+    transform: scale(1.1);
+}
+
+.download-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.app-more-info {
+    font-size: 16px;
+    margin: 0;
+    padding-top: 0;
+}
+
+.app-download-header {
+    text-align: left;
+    margin: 0 0 15px 0;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.app-download-header h3 {
+    color: white;
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Mobile adjustments for app details */
+@media (max-width: 768px) {
+    .app-details {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px 30px;
+        max-width: 100%;
+        margin: 30px auto 0;
+    }
+    
+    .hkemobility-section .app-more-info {
+        max-width: 100%;
+    }
+    
+    .app-details .app-icon {
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
+        margin: 5px 0 0 0 !important;
+    }
+    
+    .app-info {
+        flex: 0 0 auto;
+    }
+    
+    .app-download-header h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .download-buttons {
+        justify-content: flex-start;
+        gap: 15px;
+        margin: 0;
+    }
+}
+
+/* ==========================================================================
+   Page-specific Styles
+   ========================================================================== */
+
+/* Hero page title overlay */
+.hero-page-title {
+    position: absolute;
+    bottom: 10%;
+    left: 8%;
+    color: white;
+}
+
+.hero-page-title h1 {
+    margin: 0;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Breadcrumb navigation */
+.breadcrumb {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.breadcrumb p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.breadcrumb a {
+    color: #fcc500;
+    font-size: 16px;
+}
+
+/* About page styles */
+.about-intro {
+    margin-bottom: 40px;
+}
+
+.about-intro p {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.contact-section h1 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 0;
+}
+
+.contact-item img {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 18px;
+    word-break: break-all;
+    flex: 1;
+}
+
+/* Mobile adjustments for contact section */
+@media (max-width: 768px) {
+    .hero-page-title {
+        bottom: 15%;
+        left: 5%;
+        right: 5%;
+    }
+    
+    .hero-page-title h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    .contact-info {
+        max-width: 100%;
+        gap: 20px;
+    }
+    
+    .contact-item {
+        gap: 20px;
+    }
+    
+    .contact-item img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .contact-item p {
+        font-size: 16px;
+    }
+    
+    .about-intro p {
+        font-size: 18px;
+    }
+}
+
+/* ==========================================================================
+   Accommodation Page Styles
+   ========================================================================== */
+
+#accommodation-finder {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 30px auto;
+    max-width: 500px;
+}
+
+#search-input {
+    flex: 1;
+    min-width: 200px;
+}
+
+#search-button {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+#search-button:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    #accommodation-finder {
+        max-width: 100%;
+    }
+    
+    #search-button {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* ==========================================================================
+   Large Screen Optimizations
+   ========================================================================== */
+
+@media (min-width: 1200px) {
+    .main-content {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer {
+        max-width: 1000px;
+    }
+
+    .hero-section {
+        max-height: 600px;
+    }
+
+    .explore-grid {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}

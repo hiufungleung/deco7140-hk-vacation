@@ -2,38 +2,37 @@
 <html lang='en'>
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arts - HK Vacation</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!--Author: Freepik https://www.flaticon.com/free-icon/hong-kong_5038869-->
-    <link rel="icon" type="image/png" href="images/hk-flag-light.png" id="favicon">
+    <link rel="icon" type="image/png" href="assets/images/common/hk-flag-light.png" class="favicon">
     <!--Author: Freepik https://www.flaticon.com/free-icon/hong-kong_5038869-->
-    <link rel="icon" type="image/png" href="images/hk-flag.png" id="favicon-dark" media="(prefers-color-scheme: dark)"
-        disabled>
+    <link rel="icon" type="image/png" href="assets/images/common/hk-flag.png" class="favicon-dark" media="(prefers-color-scheme: dark)" disabled>
 
-<!--    <script src="loadHeaderFooter.js"></script>-->
 </head>
 
 <body>
-    <div id="headerpage"></div>
+    <div class="header-container"></div>
 
-    <header id="page-header">
+    <header class="hero-section">
         <!--Video: Dear Jane - Galaxy Repairman-->
         <!--https://www.youtube.com/watch?v=sg8V5BLMEhE-->
-        <video class="bg-image" src="images/Arts-pic1.mp4" muted loop autoplay></video>
-        <div id="bg-image-title">
+        <video class="hero-bg-image" src="assets/images/arts/Arts-pic1.mp4" muted loop autoplay></video>
+        <div class="hero-page-title">
             <h1>Arts</h1>
             <p>Discover Creative Expressions</p>
         </div>
     </header>
 
-    <div class="content">
-        <div id="location" class="desktop-only">
+    <main class="main-content">
+        <nav class="breadcrumb desktop-only">
             <p>Current location: <a href="index.html">Home</a>
                 &nbsp>&nbsp&nbspDestinations&nbsp>&nbsp&nbspAtrs</p>
-        </div>
+        </nav>
 
-        <div>
+        <section>
             <!--All the contents in this div are referred from-->
             <!--https://www.discoverhongkong.com/eng/what-s-new/events/detail.id80115.html-->
             <h1>Hong Kong Pop Culture Festival 2023</h1>
@@ -47,21 +46,21 @@
                     city’s pop culture.
                     </p>
                 </div>
-                <img src="images/Arts-pic2.jpeg" alt="">
+                <img src="assets/images/arts/Arts-pic2.jpeg" alt="">
             </article>
             <p style="margin: 0;">For more information, click <a href="www.pcf.gov.hk/en" class="link-in-text">here</a>.</p>
-        </div>   
+        </section>   
 
-    </div>
+    </main>
 
 
-    <div id="footerpage"></div>
+    <div class="footer-container"></div>
 
 
     <script>
         const currentLocation = '/arts.html';
     </script>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

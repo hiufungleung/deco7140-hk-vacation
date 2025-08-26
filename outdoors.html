@@ -2,39 +2,38 @@
 <html lang='en'>
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Outdoors - HK Vacation</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!--Author: Freepik https://www.flaticon.com/free-icon/hong-kong_5038869-->
-    <link rel="icon" type="image/png" href="images/hk-flag-light.png" id="favicon">
+    <link rel="icon" type="image/png" href="assets/images/common/hk-flag-light.png" class="favicon">
     <!--Author: Freepik https://www.flaticon.com/free-icon/hong-kong_5038869-->
-    <link rel="icon" type="image/png" href="images/hk-flag.png" id="favicon-dark" media="(prefers-color-scheme: dark)"
-        disabled>
+    <link rel="icon" type="image/png" href="assets/images/common/hk-flag.png" class="favicon-dark" media="(prefers-color-scheme: dark)" disabled>
 
-<!--    <script src="loadHeaderFooter.js"></script>-->
 </head>
 
 <body>
-    <div id="headerpage"></div>
+    <div class="header-container"></div>
 
-    <header id="page-header">
+    <header class="hero-section">
         <!--image source: https://www.thrillophilia.com/countries/hong-kong-->
-        <img class="bg-image" src="images/outdoors-pic1.png" alt="">
-        <div id="bg-image-title">
+        <img class="hero-bg-image" src="assets/images/outdoors/outdoors-pic1.png" alt="Outdoors background">
+        <div class="hero-page-title">
             <h1>Outdoors</h1>
             <p>Discover Hidden Gems of the Country</p>
         </div>
     </header>
 
-    <div class="content">
-        <div id="location" class="desktop-only">
+    <main class="main-content">
+        <nav class="breadcrumb desktop-only">
             <p>Current location: <a href="index.html">Home</a>
                 &nbsp>&nbsp&nbspDestinations&nbsp>&nbsp&nbspOutdoors</p>
-        </div>
+        </nav>
 
 
 
-        <div>
+        <section>
             <!--All the contents in this div are referred from-->
             <!--https://epic-places.com/unesco-global-geopark.html-->
             <h1>Hong Kong UNESCO Global Geopark</h1>
@@ -55,7 +54,7 @@
                     of Tai Long Wan.
                     </p>
                 </div>
-                <img src="images/Outdoors-UNESCO-1.jpeg" alt="">
+                <img src="assets/images/outdoors/Outdoors-UNESCO-1.jpeg" alt="">
             </article>
             <article class="passage  passage-with-title passage-smaller-text passage-inversed">
                 <div>
@@ -66,7 +65,7 @@
                     The Ung Kong Group consists of Bluff Island, Wang Chau Island and Basalt Island. The forces of sea and wind have formed
                     numerous steep cliffs and sea arks.</p>
                 </div>
-                <img src="images/Outdoors-UNESCO-2.jpeg" alt="">
+                <img src="assets/images/outdoors/Outdoors-UNESCO-2.jpeg" alt="">
             </article>
             <article class="passage passage-with-title passage-smaller-text">
                 <div>
@@ -78,7 +77,7 @@
                     the high mountains and formed the distinctive coastal area.
                 </p>
                 </div>
-                <img src="images/Outdoors-UNESCO-3.jpeg" alt="">
+                <img src="assets/images/outdoors/Outdoors-UNESCO-3.jpeg" alt="">
             </article>
             <article class="passage  passage-with-title passage-smaller-text passage-inversed">
                 <div>
@@ -96,7 +95,7 @@
                     coastal erosion created one of Hong Kong's most famous rocks: the Devils Fist. The oldest rock formations in Hong Kong
                     are found along the coast from Tolo Channel.</p>
                 </div>
-                <img src="images/Outdoors-UNESCO-4.jpeg" alt="">
+                <img src="assets/images/outdoors/Outdoors-UNESCO-4.jpeg" alt="">
             </article>
         </div>
 
@@ -111,25 +110,25 @@
             protected environmental sites.</p>
             <!--The following image is referred from this website-->
             <!--https://www.dcfever.com/column/read.php?id=5470-->
-            <img src="images/outdoors-laichichong.jpeg" alt="Lai Chi Chong">
+            <img src="assets/images/outdoors/outdoors-laichichong.jpeg" alt="Lai Chi Chong">
             <p>The 3,000-hectare country park and islands are also home to picturesque rolling hills, plateaus, and many old rural
             settlements bordered by feng shui woods. To explore the beautiful nature and the rich culture and history of the area,
             start with a hike from the Hakka village of Pak Sha O to Lai Chi Chong, a geosite famous for spectacular rock formations
             — and Instagrammable photo opportunities. Then, hop on a kaito to Tap Mun (Grass Island), home to a peaceful fishing
             village with seafood restaurants that offer a taste of its fine culinary culture.</p>
-        </div>
-    </div>
+        </section>
+    </main>
 
 
     
 
-    <div id="footerpage"></div>
+    <div class="footer-container"></div>
 
 
     <script>
         const currentLocation = '/outdoors.html';
     </script>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

@@ -1,85 +1,90 @@
 
-<div id="top">
-    <button id="menu-button" class="mobile-only">
-        <!--Author: Icon Hubs https://www.flaticon.com/free-icon/menu_9091429-->
-        <img id="menu-icon" src="images/menu.png" alt="menu"></button>
-    <a id="logo" href="index.html">
+<div class="site-header">
+    <button class="mobile-nav__toggle mobile-only" data-toggle="closed" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle navigation menu</span>
+        <div class="mobile-nav__icon">
+            <span class="mobile-nav__line"></span>
+            <span class="mobile-nav__line"></span>
+            <span class="mobile-nav__line"></span>
+        </div>
+    </button>
+    <a class="logo" href="index.html">
         <!--Author: Freepik https://www.flaticon.com/free-icon/hong-kong_5038869-->
-        <img src="images/hk-flag.png" alt="logo">
+        <img src="assets/images/common/hk-flag.png" alt="Hong Kong flag logo">
         <h1>HK Vacation</h1>
     </a>
 </div>
 
-<nav id="navigation" class="desktop-only">
-    <ul>
-        <li id="destinations-desktop"><a>Destinations &#x25BE</a>
-            <ul id="destinations-desktop-dropdown">
+<nav class="main-navigation desktop-only">
+    <ul class="nav-list">
+        <li class="nav-item nav-destinations"><a class="nav-link">Destinations &#x25BE</a>
+            <ul class="dropdown-menu">
                 <li><a href="attraction.html">Attraction</a></li>
                 <li><a href="outdoors.html">Outdoors</a></li>
                 <li><a href="culture.html">Culture</a></li>
                 <li><a href="arts.html">Arts</a></li>
             </ul>
-    </li>
-        <li id="dining-desktop"><a href="dining.html">Dining</a></li>
-        <li id="shopping-desktop"><a href="shopping.html">Shopping</a></li>
-        <li id="transport-desktop"><a href="transport.html">Transport</a></li>
-        <li id="accommodation-desktop"><a href="accommodation.html">Accommodation</a></li>
-        <li id="about-us-desktop"><a href="about-us.html">About us</a></li>
+        </li>
+        <li class="nav-item nav-dining"><a class="nav-link" href="dining.html">Dining</a></li>
+        <li class="nav-item nav-shopping"><a class="nav-link" href="shopping.html">Shopping</a></li>
+        <li class="nav-item nav-transport"><a class="nav-link" href="transport.html">Transport</a></li>
+        <li class="nav-item nav-accommodation"><a class="nav-link" href="accommodation.html">Accommodation</a></li>
+        <li class="nav-item nav-about-us"><a class="nav-link" href="about-us.html">About us</a></li>
     </ul>
 </nav>
 
 
 
-<div id="menu-cover" class="mobile-only"></div>
+<div class="menu-cover mobile-only"></div>
 
-<div class="mobile-only" id="mobile-menu">
-    <ul>
-        <li>
-            <a id="destinations-mobile">
+<div class="mobile-menu mobile-only">
+    <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+            <a class="mobile-nav-link mobile-destinations">
                 <!--Author: Vectors Tank https://www.flaticon.com/free-icon/travel-guide_9735658-->
-                <img src="images/destination-icon.png" alt="">
+                <img src="assets/images/common/destination-icon.png" alt="Destination icon">
                 <p>&nbsp&nbspDestinations &#x25BE</p>
             </a>
-            <div id="destinations-mobile-dropdown">
+            <div class="mobile-dropdown">
                 <a href="attraction.html">Attraction</a>
                 <a href="outdoors.html">Outdoors</a>
                 <a href="culture.html">Culture</a>
                 <a href="arts.html">Arts</a>
             </div>
         </li>
-        <li>
-            <a id="dining-mobile" href="dining.html">
+        <li class="mobile-nav-item">
+            <a class="mobile-nav-link mobile-dining" href="dining.html">
                 <!--Author: Freepik https://www.flaticon.com/free-icon/fork_1046857-->
-                <img src="images/dining-icon.png" alt="">
+                <img src="assets/images/dining/dining-icon.png" alt="Dining icon">
                 <p>&nbsp&nbspDining</p>
             </a>
         </li>
-        <li>
-            <a id="shopping-mobile" href="shopping.html">
+        <li class="mobile-nav-item">
+            <a class="mobile-nav-link mobile-shopping" href="shopping.html">
                 <!--Author: Freepik https://www.flaticon.com/free-icon/shopping-bag_1656850-->
-                <img src="images/shopping-icon.png" alt="">
+                <img src="assets/images/shopping/shopping-icon.png" alt="Shopping icon">
                 <p>&nbsp&nbspShopping</p>
             </a>
         </li>
-        <li>
-            <a id="transport-mobile" href="transport.html">
+        <li class="mobile-nav-item">
+            <a class="mobile-nav-link mobile-transport" href="transport.html">
                 <!--Author: Pixel Perfect https://www.flaticon.com/free-icon/tram_635690-->
-                <img src="images/transport-icon.png" alt="">
+                <img src="assets/images/transport/transport-icon.png" alt="Transport icon">
                 <p>&nbsp&nbspTransport</p>
             </a>
         </li>
-        <li>
-            <a id="accommodation-mobile" href="accommodation.html">
+        <li class="mobile-nav-item">
+            <a class="mobile-nav-link mobile-accommodation" href="accommodation.html">
                 <!--Author: designvector10 https://www.flaticon.com/free-icon/hotel-bed_3060178-->
-                <img src="images/accommodation-icon.png" alt="">
+                <img src="assets/images/accommodation/accommodation-icon.png" alt="Accommodation icon">
                 <p>&nbsp&nbspAccommodation</p>
             </a>
         </li>
-        <li>
-            <a id="about-us-mobile" href="about-us.html">
+        <li class="mobile-nav-item">
+            <a class="mobile-nav-link mobile-about-us" href="about-us.html">
                 <!--Author: srip https://www.flaticon.com/free-icon/about_3356068-->
                 <!--modified-->
-                <img src="images/about-us-icon.png" alt="">
+                <img src="assets/images/about-us/about-us-icon.png" alt="About us icon">
                 <p>&nbsp&nbspAbout us</p>
             </a>
         </li>
@@ -90,20 +95,30 @@
         <li><a id="faqs-mobile" href="about-us.html#contact-us">FAQs</a></li>
     </ul>
     -->
-    <div id="social-icon-mobile">
+    <div class="mobile-social-icons">
         <a href="https://www.facebook.com/" target="_blank">
-            <!--Author: Freepik https://www.flaticon.com/free-icon/facebook-app-symbol_20837-->
-            <img class="social-icon" src="images/facebook-logo.png" alt="facebook">
+            <div class="icon-container">
+                <!--Author: Freepik https://www.flaticon.com/free-icon/facebook-app-symbol_20837-->
+                <img class="social-icon" src="assets/images/common/facebook-logo.png" alt="Facebook">
+                <!--Author: Freepik https://www.flaticon.com/free-icon/facebook-app-symbol_20837-->
+                <img class="social-icon social-icon-hover" src="assets/images/common/facebook-logo-hover.png" alt="Facebook">
+            </div>
         </a>
         <a href="https://www.instagram.com/" target="_blank">
-            <!--Author: Freepik https://www.flaticon.com/free-icon/instagram_1400487-->
-            <img class="social-icon" src="images/instagram-logo.png" alt="facebook">
+            <div class="icon-container">
+                <!--Author: Freepik https://www.flaticon.com/free-icon/instagram_1400487-->
+                <img class="social-icon" src="assets/images/common/instagram-logo.png" alt="Instagram">
+                <!--Author: Freepik https://www.flaticon.com/free-icon/instagram_1400487-->
+                <img class="social-icon social-icon-hover" src="assets/images/common/instagram-logo-hover.png" alt="Instagram">
+            </div>
         </a>
-
-
         <a href="https://www.twitter.com/" target="_blank">
-            <!--Author: Pixel perfect https://www.flaticon.com/free-icon/twitter_733579-->
-            <img class="social-icon" src="images/twitter-logo.png" alt="facebook">
+            <div class="icon-container">
+                <!--Author: Pixel perfect https://www.flaticon.com/free-icon/twitter_733579-->
+                <img class="social-icon" src="assets/images/common/twitter-logo.png" alt="Twitter">
+                <!--Author: Pixel perfect https://www.flaticon.com/free-icon/twitter_733579-->
+                <img class="social-icon social-icon-hover" src="assets/images/common/twitter-logo-hover.png" alt="Twitter">
+            </div>
         </a>
     </div>
 

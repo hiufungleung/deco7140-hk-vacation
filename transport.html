@@ -2,62 +2,66 @@
 <html lang='en'>
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transport - HK Vacation</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <!--Author: Freepik https://www.flaticon.com/free-icon/hong-kong_5038869-->
-    <link rel="icon" type="image/png" href="images/hk-flag-light.png" id="favicon">
+    <link rel="icon" type="image/png" href="assets/images/common/hk-flag-light.png" class="favicon">
     <!--Author: Freepik https://www.flaticon.com/free-icon/hong-kong_5038869-->
-    <link rel="icon" type="image/png" href="images/hk-flag.png" id="favicon-dark" media="(prefers-color-scheme: dark)"
-        disabled>
+    <link rel="icon" type="image/png" href="assets/images/common/hk-flag.png" class="favicon-dark" media="(prefers-color-scheme: dark)" disabled>
 
-<!--    <script src="loadHeaderFooter.js"></script>-->
 </head>
 
 <body>
-    <div id="headerpage"></div>
+    <div class="header-container"></div>
 
-    <header id="page-header">
+    <header class="hero-section">
         <!--Photographer: Jimmy Chan https://www.pexels.com/zh-tw/photo/1671854/-->
-        <img class="bg-image" src="images/transport-pic1.png" alt="">
-        <div id="bg-image-title">
+        <img class="hero-bg-image" src="assets/images/transport/transport-pic1.png" alt="Transport background">
+        <div class="hero-page-title">
             <h1>Transport</h1>
             <p>Journey through Vibrant Streets</p>
         </div>
     </header>
 
-    <div class="content">
+    <main class="main-content">
         <!--Texts and pictures (except "iOS" and "Android" logos) below is referred from Hong Kong Tourism Board Website-->
         <!--https://www.discoverhongkong.com/seasia/plan/traveller-info/getting-around.html-->
-        <div id="location" class="desktop-only">
+        <nav class="breadcrumb desktop-only">
             <p>Current location: <a href="index.html">Home</a>
                 &nbsp>&nbsp&nbspTransport</p>
-        </div>
-        <div>
+        </nav>
+        <section class="hkemobility-section">
             <h1>HKeMobility mobile app — a one-stop journey planner covering all modes of public transport</h1>
-            <p>Plan your journey with the help of ‘HKeMobility’ — an all-in-one travel mobile app developed by Hong Kong’s Transport
+            <p>Plan your journey with the help of 'HKeMobility' — an all-in-one travel mobile app developed by Hong Kong's Transport
             Department. By providing information such as transport routes, fares, journey time, arrival time and real-time traffic
             conditions about MTR, buses, mini-buses, trams, ferries and water taxis, it enables you to find the best point-to-point
             transportation using public transport, and get around the city with ease.</p>
-            <div id="app-details">
-                <img src="images/hkemobility-icon.png" alt="">
-                <div>
-                    <p>Download HKeMobility: </p>
-                    <a href="https://apps.apple.com/hk/app/hkemobility/id426108163?l=en">
-                        <!--This apple icon is referred from Flaticon, Author: Swifticons-->
-                        <!--https://www.flaticon.com/free-icon/android_160138-->
-                        <img class="icon" src="images/apple-icon.png" alt="" data-hover-src="images/apple-icon-hover.png">
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.hketransport&hl=en_US&gl=US">
-                        <!--This apple icon is referred from Flaticon, Author: pictogramer-->
-                        <!--https://www.flaticon.com/free-icon/apple_1240942-->
-                        <img class="icon" src="images/android-icon.png" alt="" data-hover-src="images/android-icon-hover.png">
-                    </a>
-                    <p>More info: <a class="link-in-text" href="https://www.hkemobility.gov.hk/">https://www.hkemobility.gov.hk/</a></p>
+            
+            <div class="app-details">
+                <img class="app-icon" src="assets/images/common/hkemobility-icon.png" alt="HKeMobility app icon">
+                <div class="app-info">
+                    <div class="app-download-header">
+                        <h3>Download HKeMobility:</h3>
+                    </div>
+                    <div class="download-buttons">
+                        <a href="https://apps.apple.com/hk/app/hkemobility/id426108163?l=en" class="download-link">
+                            <!--This apple icon is referred from Flaticon, Author: Swifticons-->
+                            <!--https://www.flaticon.com/free-icon/android_160138-->
+                            <img class="download-icon icon" src="assets/images/common/apple-icon.png" alt="Download on App Store" data-hover-src="assets/images/common/apple-icon-hover.png">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.hketransport&hl=en_US&gl=US" class="download-link">
+                            <!--This android icon is referred from Flaticon, Author: pictogramer-->
+                            <!--https://www.flaticon.com/free-icon/apple_1240942-->
+                            <img class="download-icon icon" src="assets/images/common/android-icon.png" alt="Get it on Google Play" data-hover-src="assets/images/common/android-icon-hover.png">
+                        </a>
+                    </div>
                 </div>
-                    
             </div>
-        </div>
+            
+            <p class="app-more-info">More info: <a class="link-in-text" href="https://www.hkemobility.gov.hk/">https://www.hkemobility.gov.hk/</a></p>
+        </section>
         <div class="article-no-flex">
             <h1>MTR – Hong Kong’s railway system</h1>
             <p>Getting around Hong Kong couldn't be easier with the quick and efficient <a class="link-in-text" href="http://www.mtr.com.hk/en/customer/tourist/index.php">Mass Transit Railway (MTR) system</a>. This covers
@@ -65,7 +69,7 @@
             Station).</p>
             <p>The MTR also operates a light rail system that runs between Yuen Long and Tuen Mun in the New Territories.</p>
             <p>Please note: Luggage size restrictions apply. Details <a class="link-in-text" href="http://www.mtr.com.hk/en/customer/main/carriage_of_luggage.html">here</a>.</p>
-            <img src="images/transport-mtr.jpeg" alt="MTR">
+            <img src="assets/images/transport/transport-mtr.jpeg" alt="MTR">
         </div>
         <article class="passage">
             <div>
@@ -75,14 +79,14 @@
                 boarding, based on distance travelled and exact change is required if paying by cash. Octopus cards are accepted on all
                 buses in Hong Kong.</p>
             </div>
-            <img src="images/transport-bus.jpeg" alt="food">
+            <img src="assets/images/transport/transport-bus.jpeg" alt="food">
         </article>
     
         <div class="article-no-flex">
             <h1>Octopus — your essential travel card in Hong Kong</h1>
             <p>An Octopus digital or physical travel card is an essential purchase in Hong Kong. It’s a smart payment tool that allows
             you to pay cash-free for all major public transport services, as well as dining, entertainment, shopping and more.</p>
-            <img src="images/transport-octopus-card.jpeg" alt="">
+            <img src="assets/images/transport/transport-octopus-card.jpeg" alt="">
             <p>There are two types of Octopus for visitors:</p>
             <ul>
                 <li>
@@ -100,19 +104,19 @@
             </ul>
                 
     
-        </div>
-    </div>
+        </section>
+    </main>
 
 
 
 
-    <div id="footerpage"></div>
+    <div class="footer-container"></div>
 
 
     <script>
         const currentLocation = '/transport.html';
     </script>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
