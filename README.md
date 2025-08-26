@@ -4,7 +4,7 @@ A comprehensive tourism website showcasing Hong Kong's attractions, dining, shop
 ## Info
 - **Deployed** via `Github Pages`: https://hiufungleung.github.io/deco7140-hk-vacation/
 ### Design Process
-![Poster][./poster.png]
+![Poster](./poster.png)
 ## 🌟 Features
 
 - **Responsive Design**: Fully optimized for desktop and mobile devices
