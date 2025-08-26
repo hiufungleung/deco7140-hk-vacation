@@ -167,19 +167,22 @@ class HKVacationApp {
      * Setup navigation highlighting
      */
     setupNavigation() {
+        // Get the current page filename (works for both root and subdirectory deployments)
+        const currentPage = this.getCurrentPageName();
+        
         const navigationMap = {
-            '/attraction.html': ['.nav-destinations', '.mobile-destinations'],
-            '/outdoors.html': ['.nav-destinations', '.mobile-destinations'],
-            '/culture.html': ['.nav-destinations', '.mobile-destinations'],
-            '/arts.html': ['.nav-destinations', '.mobile-destinations'],
-            '/dining.html': ['.nav-dining', '.mobile-dining'],
-            '/shopping.html': ['.nav-shopping', '.mobile-shopping'],
-            '/transport.html': ['.nav-transport', '.mobile-transport'],
-            '/accommodation.html': ['.nav-accommodation', '.mobile-accommodation'],
-            '/about-us.html': ['.nav-about-us', '.mobile-about-us']
+            'attraction.html': ['.nav-destinations', '.mobile-destinations'],
+            'outdoors.html': ['.nav-destinations', '.mobile-destinations'],
+            'culture.html': ['.nav-destinations', '.mobile-destinations'],
+            'arts.html': ['.nav-destinations', '.mobile-destinations'],
+            'dining.html': ['.nav-dining', '.mobile-dining'],
+            'shopping.html': ['.nav-shopping', '.mobile-shopping'],
+            'transport.html': ['.nav-transport', '.mobile-transport'],
+            'accommodation.html': ['.nav-accommodation', '.mobile-accommodation'],
+            'about-us.html': ['.nav-about-us', '.mobile-about-us']
         };
 
-        const activeSelectors = navigationMap[this.currentLocation];
+        const activeSelectors = navigationMap[currentPage];
         if (!activeSelectors) return;
 
         activeSelectors.forEach(selector => {
@@ -188,6 +191,28 @@ class HKVacationApp {
                 element.classList.add('active');
             }
         });
+    }
+
+    /**
+     * Get current page filename from pathname
+     * Works for both root and subdirectory deployments
+     */
+    getCurrentPageName() {
+        const pathname = window.location.pathname;
+        
+        // Extract filename from pathname
+        // Examples: 
+        // '/attraction.html' -> 'attraction.html'
+        // '/repo/attraction.html' -> 'attraction.html'
+        // '/user.github.io/repo/attraction.html' -> 'attraction.html'
+        const filename = pathname.split('/').pop();
+        
+        // Handle index page or root path
+        if (!filename || filename === '' || filename === '/') {
+            return 'index.html';
+        }
+        
+        return filename;
     }
 
     /**
