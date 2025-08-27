@@ -854,8 +854,16 @@ footer {
         height: auto;
     }
 
-    .social-icon-hover {
-        display: none;
+    .icon-container:hover {
+        transform: none;
+    }
+    
+    .icon-container:hover .social-icon {
+        opacity: 1;
+    }
+    
+    .icon-container:hover .social-icon-hover {
+        opacity: 0;
     }
     
     /* Re-enable hover effects for mobile social icons on touch */

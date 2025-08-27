@@ -255,6 +255,7 @@ class HKVacationApp {
      */
     initFooter() {
         this.setupIconHovers();
+        this.setupMobileSocialIcons();
         this.setupEmailValidation();
     }
 
@@ -281,6 +282,41 @@ class HKVacationApp {
             icon.addEventListener('mouseleave', () => {
                 icon.src = originalSrc;
             });
+        });
+    }
+
+    /**
+     * Setup mobile social icon interactions
+     */
+    setupMobileSocialIcons() {
+        const mediaQuery = window.matchMedia('(max-width: 768px)');
+        if (!mediaQuery.matches) return;
+        
+        const socialIconContainers = document.querySelectorAll('.icon-container');
+        
+        socialIconContainers.forEach(container => {
+            let touchTimeout;
+            
+            // Touch/click handler
+            container.addEventListener('touchstart', () => {
+                // Show hover state
+                const normalIcon = container.querySelector('.social-icon:not(.social-icon-hover)');
+                const hoverIcon = container.querySelector('.social-icon-hover');
+                
+                if (normalIcon && hoverIcon) {
+                    normalIcon.style.opacity = '0';
+                    hoverIcon.style.opacity = '1';
+                    
+                    // Clear any existing timeout
+                    if (touchTimeout) clearTimeout(touchTimeout);
+                    
+                    // Reset to normal state after 150ms
+                    touchTimeout = setTimeout(() => {
+                        normalIcon.style.opacity = '1';
+                        hoverIcon.style.opacity = '0';
+                    }, 150);
+                }
+            }, { passive: true });
         });
     }
 
